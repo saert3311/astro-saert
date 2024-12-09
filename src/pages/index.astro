@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
+import Badge from '@/components/Badge.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Welcome - Jose Duarte">
-	<Welcome />
+    <main>
+        <section class="w-full mx-auto lg:w-[900px] py-44">
+            <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+                Hola, soy Jose Duarte (saert)
+                <div class="flex justify-center items-center">
+                    <Badge>Disponible para trabajar</Badge>
+                </div>
+            </h1>
+            <h2 class="text-xl opacity-80">
+                Un Apasionado por la tecnología y sus usos en la vida diaria de las personas usando el desarrollo web, así mismo como su implementación en diversas plataformas y tecnologías.
+            </h2>
+        </section>
+    </main>
 </Layout>

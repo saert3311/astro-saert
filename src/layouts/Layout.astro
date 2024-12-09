@@ -1,6 +1,7 @@
 ---
 const {title, generator} = Astro.props
 import Header from "@/components/Header.astro"
+import '@fontsource-variable/onest';
 ---
 <!doctype html>
 <html lang="es">
@@ -9,7 +10,13 @@ import Header from "@/components/Header.astro"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={ generator } />
-		<title>{ title }</title>
+		<title>{title}</title>
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="Jose Duarte" />
+		<link rel="manifest" href="/site.webmanifest" />
 	</head>
 	<body>
 		<Header />
@@ -17,11 +24,20 @@ import Header from "@/components/Header.astro"
 	</body>
 </html>
 
-<style>
-	html,
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html{
+		scroll-behavior: smooth;
+		font-family: 'Onest Variable', system-ui, sans-serif;
+	}
+
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		background-color: #050505;
+		min-height: 100vh;
 	}
 </style>
