@@ -1,6 +1,22 @@
 ---
 import SectionContainer from "./SectionContainer.astro"
 import ServiceCard from "./ServiceCard.astro"
+import ListElement from "./ListElement.astro"
+
+const ITEMS = [
+    {
+        name: "Por",
+        description: "Comenzar un negocio o marca personal es un dolor de cabeza, ahora imaginate gestionar tu presencia o recursos digitales cuando apenas inicias. Lo peor de todo es que si quieres crecer debes tener esa asignatura al dia."
+    },
+    {
+        name: "Para",
+        description: "Pequeños, medianos empresarios, y tambien individuales que quieran abrirse en el mas competitivo mercado, el dominio de los recursos digitales es imperativo para que cualquiera pueda existir en el mundo digital."
+    },
+    {
+        name: "Como",
+        description: "Dedicacion casi artesanal a los procesos, la pequeña y mediana empresa tiene la ventaja de tener un control mucho mas cercano de sus procesos asi como de las implementaciones que decidan realizar."
+    }
+]
 ---
 <SectionContainer>
     <div class="container py-16 md:py-20" id="services">
@@ -23,158 +39,29 @@ import ServiceCard from "./ServiceCard.astro"
                         slot="image"
                 />
                 DESARROLLO WEB
-                <Fragment slot="subtitle">Si no estas en internet no existes, asi de simple</Fragment>
+                <Fragment slot="subtitle">Si no estas en internet no existes, asi de simple, grita aqui estoy de la mejor manera posible</Fragment>
             </ServiceCard>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700">
-                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div>
-                        <img
-                                src="/assets/img/icon-development-white.svg"
-                                alt="development icon"
-                        />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3
-                            class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                    >
-                        DESARROLLO WEB
-                    </h3>
-                    <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Si no estas en internet no existes, asi de simple.
-                    </p>
-                </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div class="hidden group-hover:block">
-                        <img
-                                src="/assets/img/icon-content-white.svg"
-                                alt="content marketing icon"
-                        />
-                    </div>
-                    <div class="block group-hover:hidden">
-                        <img
-                                src="/assets/img/icon-content-black.svg"
-                                alt="content marketing icon"
-                        />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3
-                            class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                    >
-                        Technical Writing
-                    </h3>
-                    <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div class="hidden group-hover:block">
-                        <img
-                                src="/assets/img/icon-mobile-white.svg"
-                                alt="Mobile Application icon"
-                        />
-                    </div>
-                    <div class="block group-hover:hidden">
-                        <img
-                                src="/assets/img/icon-mobile-black.svg"
-                                alt="Mobile Application icon"
-                        />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3
-                            class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                    >
-                        Mobile Development
-                    </h3>
-                    <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div class="hidden group-hover:block">
-                        <img
-                                src="/assets/img/icon-email-white.svg"
-                                alt="Email Marketing icon"
-                        />
-                    </div>
-                    <div class="block group-hover:hidden">
-                        <img
-                                src="/assets/img/icon-email-black.svg"
-                                alt="Email Marketing icon"
-                        />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3
-                            class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                    >
-                        Email Development
-                    </h3>
-                    <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div class="hidden group-hover:block">
-                        <img
-                                src="/assets/img/icon-design-white.svg"
-                                alt="Theme Design icon"
-                        />
-                    </div>
-                    <div class="block group-hover:hidden">
-                        <img
-                                src="/assets/img/icon-design-black.svg"
-                                alt="Theme Design icon"
-                        />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3
-                            class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                    >
-                        Graphic Design
-                    </h3>
-                    <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div class="hidden group-hover:block">
-                        <img
-                                src="/assets/img/icon-graphics-white.svg"
-                                alt="Graphic Design icon"
-                        />
-                    </div>
-                    <div class="block group-hover:hidden">
-                        <img
-                                src="/assets/img/icon-graphics-black.svg"
-                                alt="Graphic Design icon"
-                        />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3
-                            class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
-                    >
-                        Web Design
-                    </h3>
-                    <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-            </div>
+            <ServiceCard>
+                <img
+                        src="/assets/img/icon-graphics-white.svg"
+                        alt="Cloud icon"
+                        slot="image"
+                />
+                SOPORTE Y MANTENIMIENTO
+                <Fragment slot="subtitle">PC, Mac, Redes, Servidores, Cloud, Windows, Linux, CCTV, todas esas palabras extrañas requieren atención.</Fragment>
+            </ServiceCard>
         </div>
     </div>
+
+    <ol class="items-center sm:flex">
+        {ITEMS.map((item, i) => (
+                <ListElement key={i}>
+                    <Fragment slot="number">{i+1}</Fragment>
+                    {item.name}
+                    <Fragment slot="description">{item.description}</Fragment>
+                </ListElement>
+        ))}
+    </ol>
+
+
 </SectionContainer>

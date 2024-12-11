@@ -1,0 +1,15 @@
+---
+
+---
+<li class="relative mb-6 sm:mb-0" {...Astro.props}>
+    <div class="flex items-center">
+        <div class="z-10 flex font-extrabold items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0 text-gray-900">
+            <slot name="number"/>
+        </div>
+        <div class="hidden sm:flex w-full h-0.5 bg-gray-700"></div>
+    </div>
+    <div class="mt-3 sm:pe-8">
+        <h3 class="text-lg font-semibold text-white"><slot /></h3>
+        <p class="text-base font-normal text-gray-400"><slot name="description" /></p>
+    </div>
+</li>
