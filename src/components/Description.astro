@@ -1,34 +1,35 @@
 ---
 import SectionContainer from "./SectionContainer.astro"
-import TitleText from "./TitleText.astro"
+import ServiceCard from "./ServiceCard.astro"
 ---
 <SectionContainer>
     <div class="container py-16 md:py-20" id="services">
         <h2
-                class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
+                class="text-center font-header text-3xl font-semibold text-primary sm:text-5xl lg:text-6xl"
         >
-            Here's what I'm good at
+            En esto soy bueno
         </h2>
         <h3
-                class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
+                class="pt-6 text-center font-header text-xl font-medium lg:text-2xl"
         >
-            These are the services Ioffer
+            Estos son los servicios que ofrezco
         </h3>
 
-        <div
-                class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3"
-        >
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+        <div class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12">
+            <ServiceCard>
+                <img
+                        src="/assets/img/icon-development-white.svg"
+                        alt="development icon"
+                        slot="image"
+                />
+                DESARROLLO WEB
+                <Fragment slot="subtitle">Si no estas en internet no existes, asi de simple</Fragment>
+            </ServiceCard>
+            <div class="group rounded px-8 py-12 shadow hover:bg-primary border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700">
                 <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div class="hidden group-hover:block">
+                    <div>
                         <img
                                 src="/assets/img/icon-development-white.svg"
-                                alt="development icon"
-                        />
-                    </div>
-                    <div class="block group-hover:hidden">
-                        <img
-                                src="/assets/img/icon-development-black.svg"
                                 alt="development icon"
                         />
                     </div>
@@ -37,10 +38,10 @@ import TitleText from "./TitleText.astro"
                     <h3
                             class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl"
                     >
-                        WEB DEVELOPMENT
+                        DESARROLLO WEB
                     </h3>
                     <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Si no estas en internet no existes, asi de simple.
                     </p>
                 </div>
             </div>
