@@ -5,15 +5,16 @@ import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
 import GithubIcon from "../components/icons/GithubIcon.astro";
 import IconMail from "../components/icons/IconMail.astro";
 import SectionContainer from '@/components/SectionContainer.astro';
+import TitleText from './TitleText.astro';
 ---
-<SectionContainer>
+<SectionContainer ClassList="py-44">
 	<img src="/avatar_web.webp"
 		 class="rounded-full size-20 mb-2"
 		 alt="Avatar saert" />
 	<div class="flex flex-row gap-x-4 pb-4">
-		<h1 class="text-white text-5xl font-bold ">
+		<TitleText>
 			Hola, soy Jose Duarte (saert)
-		</h1>
+		</TitleText>
 		<div class="flex justify-center items-center self-end">
 			<a href="https://www.linkedin.com/in/saert3311" target="_blank" rel="noopener"><Badge>Disponible para trabajar</Badge></a>
 		</div>
