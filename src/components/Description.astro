@@ -3,6 +3,8 @@ import SectionContainer from "./SectionContainer.astro"
 import ServiceCard from "./ServiceCard.astro"
 import ListElement from "./ListElement.astro"
 import FrontTools from "./FrontTools.astro";
+import BackTools from "./BackTools.astro"
+import ToolsTools from "./ToolsTools.astro"
 
 const ITEMS = [
     {
@@ -63,12 +65,10 @@ const ITEMS = [
                 </ListElement>
         ))}
     </ol>
-    <h4
-            class="pt-6 text-center font-header text-xl font-medium lg:text-2xl"
-    >
+    <h4 class="pt-8 text-center font-header text-xl font-medium lg:text-2xl">
         Y uso estas herramientas
     </h4>
     <div class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:pt-12">
-    <FrontTools />
+    <FrontTools /><BackTools /><ToolsTools />
     </div>
 </SectionContainer>
