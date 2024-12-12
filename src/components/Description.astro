@@ -2,6 +2,7 @@
 import SectionContainer from "./SectionContainer.astro"
 import ServiceCard from "./ServiceCard.astro"
 import ListElement from "./ListElement.astro"
+import FrontTools from "./FrontTools.astro";
 
 const ITEMS = [
     {
@@ -62,6 +63,10 @@ const ITEMS = [
                 </ListElement>
         ))}
     </ol>
-
-
+    <h4
+            class="pt-6 text-center font-header text-xl font-medium lg:text-2xl"
+    >
+        Y uso estas herramientas
+    </h4>
+    <FrontTools />
 </SectionContainer>

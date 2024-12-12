@@ -1,7 +1,7 @@
 ---
-import Dots from "@/components/icons/Dots.astro"
+import Card from "@/components/Card.astro"
 ---
-<div class="relative group rounded px-8 py-12 hover:bg-primary border shadow bg-gray-800 border-gray-700 hover:scale-105 hover:bg-white/10 transition">
+<Card ShowDots={true} >
     <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
         <div>
             <slot name="image" />
@@ -17,7 +17,4 @@ import Dots from "@/components/icons/Dots.astro"
             <slot name="subtitle" />
         </p>
     </div>
-    <div class="absolute bottom-1 left-1">
-    <Dots />
-    </div>
-</div>
+</Card>
