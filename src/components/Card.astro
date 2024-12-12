@@ -1,11 +1,15 @@
 ---
 import Dots from "@/components/icons/Dots.astro"
 interface Props {
-    ShowDots?: boolean
+    ShowDots?: boolean,
+    ClassList?: string
 }
-const { ShowDots } = Astro.props
+const { ShowDots, ClassList } = Astro.props
 ---
-<div class="relative group rounded px-8 py-12 hover:bg-primary border shadow bg-gray-800 border-gray-700 hover:scale-105 hover:bg-white/10 transition">
+<div class:list={[ 'relative', 'group rounded',
+                'hover:bg-primary', 'border', 'shadow',
+                'bg-gray-800', 'border-gray-700',
+                'hover:scale-105', 'hover:bg-white/10', 'transition', ClassList]}>
     <slot />
     <div class="absolute bottom-1 left-1">
         {ShowDots && (<Dots />) }
