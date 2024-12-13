@@ -5,7 +5,7 @@ import ListElement from "./ListElement.astro"
 import FrontTools from "./FrontTools.astro";
 import BackTools from "./BackTools.astro"
 import ToolsTools from "./ToolsTools.astro"
-
+import Subtitle from "./Subtitle.astro"
 const ITEMS = [
     {
         name: "Por",
@@ -23,11 +23,9 @@ const ITEMS = [
 ---
 <SectionContainer>
     <div class="container py-16 md:py-20" id="services">
-        <h2
-                class="text-center font-header text-3xl font-semibold text-primary sm:text-5xl lg:text-6xl"
-        >
+        <Subtitle>
             En esto soy bueno
-        </h2>
+        </Subtitle>
         <h3
                 class="pt-6 text-center font-header text-xl font-medium lg:text-2xl"
         >
