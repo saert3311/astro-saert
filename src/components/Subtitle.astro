@@ -1,3 +1,10 @@
-<h2 class="text-center font-header text-3xl font-semibold text-primary sm:text-4xl">
+---
+const { ClassList} = Astro.props
+
+interface Props {
+    ClassList?: string
+}
+---
+<h2 class:list={["text-center", "font-header", "text-3xl", "font-semibold", "text-primary", "sm:text-4xl", ClassList]}>
     <slot />
 </h2>
