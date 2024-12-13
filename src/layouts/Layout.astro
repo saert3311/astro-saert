@@ -2,6 +2,7 @@
 const {title, generator, description} = Astro.props
 import Header from "@/components/Header.astro"
 import '@fontsource-variable/onest';
+import Footer from "@/components/Footer.astro"
 ---
 <!doctype html>
 <html lang="es">
@@ -23,6 +24,7 @@ import '@fontsource-variable/onest';
 	<div class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
@@ -41,5 +43,11 @@ import '@fontsource-variable/onest';
 		flex-direction: column;
 		background-color: #050505;
 		min-height: 100vh;
+	}
+	/* Elimina movimiendo cuando usuario desactiva animaciones ( Accesibilidad ) */
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>
