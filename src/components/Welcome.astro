@@ -6,34 +6,51 @@ import GithubIcon from "../components/icons/GithubIcon.astro";
 import IconMail from "../components/icons/IconMail.astro";
 import SectionContainer from '@/components/SectionContainer.astro';
 import TitleText from './TitleText.astro';
+import DownArrowIcon from '@/components/icons/DownArrowIcon.astro';
 ---
-<SectionContainer ClassList="py-44" id="welcome">
-	<div class="flex flex-row gap-x-4 pb-3">
-		<img src="/avatar_web.webp"
-			 class="rounded-full size-20"
-			 alt="Avatar saert" />
-		<div class="flex justify-center items-center self-end">
-			<Badge>Disponible para trabajar</Badge>
+<SectionContainer ClassList="flex items-center relative" id="welcome">
+	<div>
+		<div class="flex flex-row gap-x-4 pb-3">
+			<img src="/avatar_web.webp"
+				 class="rounded-full size-20"
+				 alt="Avatar saert" />
+			<div class="flex justify-center items-center self-end">
+				<Badge>Disponible para trabajar</Badge>
+			</div>
 		</div>
-	</div>
 		<TitleText ClassList="pb-3">
 			Hola, soy Jose Duarte (saert)
 		</TitleText>
-	<h2 class="text-xl opacity-80 mb-4 text-balance">
-		<span class="text-yellow-200">Desarrollador Web</span> apasionado por la tecnología y sus usos en la vida diaria, dedicado al desarrollo de soluciones web únicas.
-	</h2>
-	<nav class="flex gap-4 flex-wrap">
-		<SocialPill href="https://www.linkedin.com/in/saert3311">
-			<LinkedInIcon />
-			Linkedin
-		</SocialPill>
-		<SocialPill href="https://www.linkedin.com/in/saert3311">
-			<GithubIcon />
-			Github
-		</SocialPill>
-		<SocialPill href="mailto:jose.duarte@trinum.xyz">
-			<IconMail />
-			jose.duarte@trinum.xyz
-		</SocialPill>
-	</nav>
+		<h2 class="text-xl opacity-80 mb-4 text-balance">
+			<span class="text-yellow-200">Desarrollador Web</span> apasionado por la tecnología y sus usos en la vida diaria, dedicado al desarrollo de soluciones web únicas.
+		</h2>
+		<nav class="flex gap-4 flex-wrap">
+			<SocialPill href="https://www.linkedin.com/in/saert3311">
+				<LinkedInIcon />
+				Linkedin
+			</SocialPill>
+			<SocialPill href="https://www.linkedin.com/in/saert3311">
+				<GithubIcon />
+				Github
+			</SocialPill>
+			<SocialPill href="mailto:jose.duarte@trinum.xyz">
+				<IconMail />
+				jose.duarte@trinum.xyz
+			</SocialPill>
+		</nav>
+	</div>
+	<div class="self-end mb-6 w-full flex justify-center absolute bottom-0">
+		<DownArrowIcon class="animate-bounce" />
+	</div>
 </SectionContainer>
+
+<style>
+	#welcome {
+		height: calc(100vh - 60px);
+	}
+	@media (min-width: 768px) {
+		#welcome {
+			height: calc(100vh - 64px);
+		}
+	}
+</style>

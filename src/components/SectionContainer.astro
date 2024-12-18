@@ -4,6 +4,6 @@ interface Props {
 }
 const {ClassList, ...rest} = Astro.props
 ---
-<section class:list={["w-full", "mx-auto", "lg:w-[900px]", ClassList]} {...rest}>
+<section class:list={["w-full", "lg:w-[900px]", "px-3", "mx-auto", "lg:px-0",  ClassList]} {...rest}>
     <slot />
 </section>
