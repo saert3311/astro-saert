@@ -6,7 +6,10 @@ import vue from '@astrojs/vue';
 
 import tailwind from '@astrojs/tailwind';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), tailwind()]
+  integrations: [vue(), tailwind()],
+  adapter: cloudflare()
 });
