@@ -1,9 +1,12 @@
 ---
+import {getLangFromUrl, useTranslations} from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
 ---
 <header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mt-2 mx-auto text-sm md:text-base">
     <nav class="flex flex-row gap-x-10 opacity-80">
-        <a href="#description">Herramientas</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#experience">Experiencia</a>
+        <a href="#description">{t('nav.tools')}</a>
+        <a href="#projects">{t('nav.projects')}</a>
+        <a href="#experience">{t('nav.experience')}</a>
     </nav>
 </header>
