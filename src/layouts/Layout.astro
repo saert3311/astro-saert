@@ -1,11 +1,12 @@
 ---
 const {title, generator, description} = Astro.props
+const { currentLocale } = Astro
 import Header from "@/components/Header.astro"
 import '@fontsource-variable/onest';
 import Footer from "@/components/Footer.astro"
 ---
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
