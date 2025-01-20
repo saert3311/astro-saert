@@ -6,30 +6,35 @@ import FrontTools from "./FrontTools.astro";
 import BackTools from "./BackTools.astro"
 import ToolsTools from "./ToolsTools.astro"
 import Subtitle from "./Subtitle.astro"
+
+import {getLangFromUrl, useTranslations} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
 const ITEMS = [
     {
-        name: "Por",
-        description: "Comenzar un negocio o marca personal es un dolor de cabeza, ahora imaginate gestionar tu presencia o recursos digitales cuando apenas inicias. Lo peor de todo es que si quieres crecer debes tener esa asignatura al dia."
+        name: t('description.for'),
+        description: t('description.for.text'),
     },
     {
-        name: "Para",
-        description: "Pequeños, medianos empresarios, y tambien individuales que quieran abrirse en el mas competitivo mercado, el dominio de los recursos digitales es imperativo para que cualquiera pueda existir en el mundo digital."
+        name: t('description.to'),
+        description: t('description.to.text'),
     },
     {
-        name: "Como",
-        description: "Dedicacion casi artesanal a los procesos, la pequeña y mediana empresa tiene la ventaja de tener un control mucho mas cercano de sus procesos asi como de las implementaciones que decidan realizar."
+        name: t('description.how'),
+        description: t('description.how.text'),
     }
 ]
 ---
 <SectionContainer id="description">
     <div class="container py-16 md:py-20" id="services">
         <Subtitle>
-            En esto soy bueno
+            {t('description.title')}
         </Subtitle>
         <h3
                 class="pt-6 font-header text-xl font-medium lg:text-2xl"
         >
-            Estos son los servicios que ofrezco
+            {t('description.subtitle')}
         </h3>
 
         <div class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12">
@@ -39,8 +44,8 @@ const ITEMS = [
                         alt="development icon"
                         slot="image"
                 />
-                DESARROLLO WEB
-                <Fragment slot="subtitle">Si no estas en internet no existes, asi de simple, grita aqui estoy de la mejor manera posible</Fragment>
+                {t('description.web')}
+                <Fragment slot="subtitle">{t('description.web.text')}</Fragment>
             </ServiceCard>
             <ServiceCard>
                 <img
@@ -48,8 +53,8 @@ const ITEMS = [
                         alt="Cloud icon"
                         slot="image"
                 />
-                SOPORTE Y MANTENIMIENTO
-                <Fragment slot="subtitle">PC, Mac, Redes, Servidores, Cloud, Windows, Linux, CCTV, todas esas palabras extrañas requieren atención.</Fragment>
+                {t('description.support')}
+                <Fragment slot="subtitle">{t('description.support.text')}</Fragment>
             </ServiceCard>
         </div>
     </div>
