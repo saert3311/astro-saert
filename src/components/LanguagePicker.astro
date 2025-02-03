@@ -3,10 +3,9 @@
 import { languages, defaultLang } from '../i18n/ui';
 const { currentLocale } = Astro
 const myLocale = currentLocale ?? defaultLang
-import LinkButton from './LinkButton.astro';
 ---
     {Object.entries(languages)
         .filter(([lang, label]) => lang != currentLocale)
         .map(([lang, label]) => (
-            🇺🇸
+            <div key={lang}>Test</div>
     ))}
