@@ -1,0 +1,12 @@
+---
+// This is for the future if a would want to add more languages
+import { languages, defaultLang } from '../i18n/ui';
+const { currentLocale } = Astro
+const myLocale = currentLocale ?? defaultLang
+import LinkButton from './LinkButton.astro';
+---
+    {Object.entries(languages)
+        .filter(([lang, label]) => lang != currentLocale)
+        .map(([lang, label]) => (
+            🇺🇸
+    ))}

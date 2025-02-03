@@ -9,12 +9,14 @@ const nav = {
     en: {
         'nav.tools': 'Tools',
         'nav.projects': 'Projects',
-        'nav.experience': 'Experience'
+        'nav.experience': 'Experience',
+        'nav.status' : 'Status',
     },
     es: {
         'nav.tools': 'Herramientas',
         'nav.projects': 'Proyectos',
-        'nav.experience': 'Experiencia'
+        'nav.experience': 'Experiencia',
+        'nav.status' : 'Monitor',
     }
 };
 
