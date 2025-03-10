@@ -5,6 +5,11 @@ import LinkIcon from "./icons/LinkIcon.astro"
 import GithubIcon from "./icons/GithubIcon.astro"
 import LinkButton from "./LinkButton.astro"
 
+import {getLangFromUrl, useTranslations} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
+
 const TAGS =  {
     WORDPRESS:'https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white',
     STRIPE:'https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white',
@@ -16,10 +21,7 @@ const TAGS =  {
 const PROJECTS = [
     {
         title: "Grexi Albornett",
-        description:
-            "Plataforma en linea realizada en Wordpress donde los usuarios pueden agendar citas, realizar talleres, " +
-            "tienda con productos, ademas incluye LMS para talleres offline y podcast para sus usuarios con un diseño " +
-            "limpio y profesional",
+        description: t('projects.grexi.description'),
         link: "https://grexialbornett.com",
         image: "assets/projects/grexi_web_portfolio.webp",
         tags: [TAGS.WORDPRESS, TAGS.STRIPE, TAGS.PHP],
@@ -27,9 +29,7 @@ const PROJECTS = [
     },
     {
         title: "Miami Scaffold Rental",
-        description:"Landing page enfocada en ofrecer soluciones de andamiaje seguras y eficientes para la industria " +
-            "de la construcción en el sur de Florida, esta realizada en HTML y CSS usando el framework bootstrap para " +
-            "minimizar los tiempos de carga y promover las conversiones",
+        description: t('projects.grexi.description'),
         link: "https://miamiscaffoldrental.com",
         image: "assets/projects/msr_web_portfolio.webp",
         tags: [TAGS.HTML, TAGS.BOOTSTRAP, TAGS.PHP],
@@ -39,7 +39,7 @@ const PROJECTS = [
 ---
 <SectionContainer ClassList="my-12" id="projects">
     <Subtitle ClassList="mb-12">
-        He hecho estos proyectos
+        {t('projects.imade')}
     </Subtitle>
     <div class="flex flex-col gap-y-16">
         {

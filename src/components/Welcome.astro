@@ -7,6 +7,11 @@ import IconMail from "../components/icons/IconMail.astro";
 import SectionContainer from '@/components/SectionContainer.astro';
 import TitleText from './TitleText.astro';
 import DownArrowIcon from '@/components/icons/DownArrowIcon.astro';
+
+import {getLangFromUrl, useTranslations} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
 ---
 <SectionContainer ClassList="flex items-center relative" id="welcome">
 	<div>
@@ -15,14 +20,14 @@ import DownArrowIcon from '@/components/icons/DownArrowIcon.astro';
 				 class="rounded-full size-20"
 				 alt="Avatar saert" />
 			<div class="flex justify-center items-center self-end">
-				<Badge>Disponible para trabajar</Badge>
+				<Badge>{t('welcome.avaliable')}</Badge>
 			</div>
 		</div>
 		<TitleText ClassList="pb-3">
-			Hola, soy Jose Duarte (saert)
+			{t('welcome.hello')}
 		</TitleText>
 		<h2 class="text-xl opacity-80 mb-4 text-balance">
-			<span class="text-yellow-200">Desarrollador Web</span> entusiasta de la tecnología y su impacto en la vida cotidiana, comprometido con la creación de soluciones web innovadoras.
+			<span class="text-yellow-200">{t('welcome.web')}</span> {t('welcome.enthusiast')}
 		</h2>
 		<nav class="flex gap-4 flex-wrap">
 			<SocialPill href="https://www.linkedin.com/in/saert3311">

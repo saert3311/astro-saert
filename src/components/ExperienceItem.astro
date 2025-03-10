@@ -1,4 +1,8 @@
 ---
+import {getLangFromUrl, useTranslations} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
 const {title, date, description, link, key} = Astro.props
 interface Props {
     title: string,
@@ -11,7 +15,7 @@ interface Props {
 <li class="mb-10 ms-6">
         <span class="absolute flex items-center justify-center size-2 bg-blue-100 rounded-full -start-1 mt-2.5 ring-4 ring-white dark:ring-gray-900 dark:bg-blue-900">
         </span>
-    <h3 class="flex items-center mb-1 text-lg font-semibold text-yellow-200">{title} { key == 0 && (<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Mas reciente</span>)}</h3>
+    <h3 class="flex items-center mb-1 text-lg font-semibold text-yellow-200">{title} { key == 0 && (<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">{t('experience.mostrecent')}</span>)}</h3>
     <time class="block mb-2 text-sm font-normal leading-none text-sky-200/90">{date}</time>
     <p class="mb-4 text-base font-normal text-gray-200 text-pretty">{description}</p>
     {link && (

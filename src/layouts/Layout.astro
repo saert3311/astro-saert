@@ -1,11 +1,12 @@
 ---
 const {title, generator, description} = Astro.props
+const { currentLocale } = Astro
 import Header from "@/components/Header.astro"
 import '@fontsource-variable/onest';
 import Footer from "@/components/Footer.astro"
 ---
 <!doctype html>
-<html lang="es">
+<html lang={currentLocale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,6 +20,18 @@ import Footer from "@/components/Footer.astro"
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<meta name="apple-mobile-web-app-title" content="Jose Duarte" />
 		<link rel="manifest" href="/site.webmanifest" />
+		<!-- Inline script to manage dark mode before page render -->
+		<script>
+			// Immediately invoked function to avoid polluting the global scope
+			(function() {
+				document.documentElement.classList.toggle(
+					'dark',
+					localStorage.theme === 'dark' ||
+					(!('theme' in localStorage) &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches)
+				);
+			})();
+		</script>
 	</head>
 	<body>
 	<div class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>

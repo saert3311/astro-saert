@@ -11,5 +11,15 @@ import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
   integrations: [vue(), tailwind()],
-  adapter: cloudflare()
+  adapter: cloudflare(),
+  i18n: {
+    locales: ['es', 'en'],
+    defaultLocale: 'es',
+    fallback: {
+      en: 'es'
+    },
+    routing: {
+      fallbackType: 'rewrite'
+    }
+  }
 });

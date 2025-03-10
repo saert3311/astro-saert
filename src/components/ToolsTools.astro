@@ -1,9 +1,14 @@
 ---
 import ToolsIcon from "@/components/icons/ToolsIcon.astro"
 import Card from "@/components/Card.astro"
+
+import {getLangFromUrl, useTranslations} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
 ---
 <Card ClassList="p-4">
-    <h5 class="text-xl opacity-80 mb-2 flex gap-x-2">Herramientas <ToolsIcon /></h5>
+    <h5 class="text-xl opacity-80 mb-2 flex gap-x-2">{t('description.tools')} <ToolsIcon /></h5>
     <div class="flex gap-3 flex-wrap">
         <img src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white">
         <img src="https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white">

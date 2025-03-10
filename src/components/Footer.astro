@@ -1,5 +1,9 @@
 ---
 const currentYear = new Date().getFullYear()
+import {getLangFromUrl, useTranslations} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
 ---
 
 <footer
@@ -9,14 +13,14 @@ const currentYear = new Date().getFullYear()
             class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
     >
     <span class="text-sm sm:text-center text-zinc-200/90"
-    >© {currentYear} (saert3311) Casi todos los derechos reservados
+    >© {currentYear} (saert3311) {t('nav.footer.msg')}
     </span>
         <ul
                 class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
         >
             <li>
                 <a id="contacto" href="mailto:jose.duarte@trinum.xyz" class="hover:underline"
-                >Contacto</a
+                >{t('nav.footer.contact')}</a
                 >
             </li>
         </ul>

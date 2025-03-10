@@ -1,0 +1,8 @@
+---
+import { defaultLang } from '../i18n/ui';
+const { currentLocale } = Astro
+const myLocale = currentLocale ?? defaultLang
+import MenuButton from './MenuButton.astro';
+import LangIcon from './icons/LangIcon.astro';
+---
+{myLocale === 'es' ? <MenuButton href="/en"><LangIcon className="w-4 h-4 text-blue-500 dark:text-white"/> EN</MenuButton> : <MenuButton href="/"><LangIcon className="w-4 h-4 text-blue-500 dark:text-white"/> ES</MenuButton>}
