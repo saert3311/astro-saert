@@ -73,11 +73,13 @@ const description = {
 const projects = {
     en: {
         'projects.imade': 'I made these projects',
-        'projects.grexi.description': 'An online platform built with WordPress where users can book appointments, participate in workshops, shop for products, and access an LMS for offline workshops and a podcast. It features a clean and professional design'
+        'projects.grexi.description': 'An online platform built with WordPress where users can book appointments, participate in workshops, shop for products, and access an LMS for offline workshops and a podcast. It features a clean and professional design',
+        'projects.miasfr.description': 'A landing page focused on offering safe and efficient scaffolding solutions for the construction industry in South Florida. It is built with HTML and CSS using the Bootstrap framework to minimize loading times and enhance conversions.'
     },
     es: {
         'projects.imade': 'He hecho estos proyectos',
-        'projects.grexi.description': 'Plataforma en linea realizada en Wordpress donde los usuarios pueden agendar citas, realizar talleres, tienda con productos, ademas incluye LMS para talleres offline y podcast para sus usuarios con un diseño limpio y profesional'
+        'projects.grexi.description': 'Plataforma en linea realizada en Wordpress donde los usuarios pueden agendar citas, realizar talleres, tienda con productos, ademas incluye LMS para talleres offline y podcast para sus usuarios con un diseño limpio y profesional',
+        'projects.miasfr.description': 'Landing page enfocada en ofrecer soluciones de andamiaje seguras y eficientes para la industria de la construcción en el sur de Florida, esta realizada en HTML y CSS usando el framework bootstrap para minimizar los tiempos de carga y promover las conversiones'
     }
 }
 
