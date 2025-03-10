@@ -48,7 +48,9 @@ const description = {
         'description.web': 'WEB DEVELOPMENT',
         'description.web.text': "If you're not on the internet, you don't exist—it's that simple. Shout Here I am! in the best way possible.",
         'description.support': 'SUPPORT & MAINTENANCE',
-        'description.support.text': 'PC, Mac, Networks, Servers, Cloud, Windows, Linux, CCTV— all those strange words require attention.'
+        'description.support.text': 'PC, Mac, Networks, Servers, Cloud, Windows, Linux, CCTV— all those strange words require attention.',
+        'description.iuse': 'I use these tools',
+        'description.tools': 'Tools',
     },
     es: {
         'description.for': 'Por',
@@ -62,19 +64,34 @@ const description = {
         'description.web': 'DESARROLLO WEB',
         'description.web.text': "Si no estas en internet no existes, asi de simple, grita aqui estoy de la mejor manera posible",
         'description.support': 'SOPORTE Y MANTENIMIENTO',
-        'description.support.text': 'PC, Mac, Redes, Servidores, Cloud, Windows, Linux, CCTV, todas esas palabras extrañas requieren atención.'
+        'description.support.text': 'PC, Mac, Redes, Servidores, Cloud, Windows, Linux, CCTV, todas esas palabras extrañas requieren atención.',
+        'description.iuse': 'Y uso estas herramientas',
+        'description.tools': 'Herramientas'
     }
 };
+
+const projects = {
+    en: {
+        'projects.imade': 'I made these projects',
+        'projects.grexi.description': 'An online platform built with WordPress where users can book appointments, participate in workshops, shop for products, and access an LMS for offline workshops and a podcast. It features a clean and professional design'
+    },
+    es: {
+        'projects.imade': 'He hecho estos proyectos',
+        'projects.grexi.description': 'Plataforma en linea realizada en Wordpress donde los usuarios pueden agendar citas, realizar talleres, tienda con productos, ademas incluye LMS para talleres offline y podcast para sus usuarios con un diseño limpio y profesional'
+    }
+}
 
 export const ui = {
     en: {
         ...nav.en,
         ...welcome.en,
-        ...description.en
+        ...description.en,
+        ...projects.en
     },
     es: {
         ...nav.es,
         ...welcome.es,
-        ...description.es
+        ...description.es,
+        ...projects.es,
     }
 } as const;
