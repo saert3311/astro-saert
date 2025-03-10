@@ -11,12 +11,16 @@ const nav = {
         'nav.projects': 'Projects',
         'nav.experience': 'Experience',
         'nav.status' : 'Status',
+        'nav.footer.msg' : 'Almost all rights reserved',
+        'nav.footer.contact': 'Contact',
     },
     es: {
         'nav.tools': 'Herramientas',
         'nav.projects': 'Proyectos',
         'nav.experience': 'Experiencia',
         'nav.status' : 'Monitor',
+        'nav.footer.msg' : 'Casi todos los derechos reservados',
+        'nav.footer.contact': 'Contacto',
     }
 };
 
@@ -83,17 +87,63 @@ const projects = {
     }
 }
 
+const experience = {
+    en: {
+        'experience.miasfr.description': 'Implementation of Odoo CRM in company processes, module creation and custom code in Python, and user support/assistance.',
+        'experience.alces.title': 'Quality Monitor - Transporte LOS ALCES',
+        'experience.alces.description': 'Monitoring, administration, and implementation of solutions and processes for a passenger flow verification system and unit tracking with Python for quality analysis',
+        'experience.iveworked': "I've worked with them",
+        'experience.mostrecent': 'Most recent'
+    },
+    es: {
+        'experience.miasfr.description': 'Implementacion de CRM odoo en procesos de la empresa, creacion de modulos y codigo personalizado en Python y asistencia/soporte a usuarios.',
+        'experience.alces.title': 'Monitor de Calidad - Transporte LOS ALCES',
+        'experience.alces.description': 'Monitoreo, administración así como implementación de soluciones y procesos de sistema de verificación de flujos de pasajeros y localización de unidades con Python para analisis de calidad',
+        'experience.iveworked': "Con ellos he trabajado",
+        'experience.mostrecent': 'Mas reciente',
+    }
+}
+
+const aboutme = {
+    en: {
+        'aboutme.title': 'A little about me',
+        'aboutme.text1': "My name is Jose Duarte, but my friends call me Saert. I have embraced the world of IT from a very young age. I am from",
+        'aboutme.text2': 'however, I am seeking new paths in',
+        'aboutme.spain': 'Spain',
+        'aboutme.text3': 'Some of my achievements include',
+        'aboutme.text4': 'collaborating in the development of an urban mobility platform for logistics and management.',
+        'aboutme.text5': 'Although it is now defunct, it was an interesting experience in how mobility can impact the lives of many people.',
+        'aboutme.text6': 'My curiosity has led me to look beyond the world of programming,',
+        'aboutme.text7': 'taking me to explore AWS and Oracle'
+    },
+    es: {
+        'aboutme.title': 'Un poco sobre mi',
+        'aboutme.text1': "Me llamo Jose Duarte pero mis amigos me llaman saert. He abrazado el mundo de la informatica desde muy corta edad, soy de",
+        'aboutme.text2': 'sin embargo me encuentro buscando nuevos caminos en',
+        'aboutme.spain': 'España',
+        'aboutme.text3': 'Algunos de mis éxitos incluyen',
+        'aboutme.text4': 'colaborar en el desarrollo de una plataforma de movilidad urbana para logistica y administración.',
+        'aboutme.text5': 'Aunque hoy está desaparecido fue una interesante experiencia en el como la movilidad puede afectar las vidas de muchas personas',
+        'aboutme.text6': 'Mi curiosidad me ha llevado a ver mas alla del mundo de la programacion,',
+        'aboutme.text7': 'me a llevado a incursionar hasta AWS o Oracle'
+    }
+}
+
 export const ui = {
     en: {
         ...nav.en,
         ...welcome.en,
         ...description.en,
-        ...projects.en
+        ...projects.en,
+        ...experience.en,
+        ...aboutme.en,
     },
     es: {
         ...nav.es,
         ...welcome.es,
         ...description.es,
         ...projects.es,
+        ...experience.es,
+        ...aboutme.es,
     }
 } as const;

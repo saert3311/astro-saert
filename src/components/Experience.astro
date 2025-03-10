@@ -2,22 +2,27 @@
 import SectionContainer from "./SectionContainer.astro"
 import Subtitle from "./Subtitle.astro"
 import ExperienceItem from "./ExperienceItem.astro"
+import {getLangFromUrl, useTranslations} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
+
 const EXPERIENCES = [
     {
         title: "Developer - Miami Scaffold Rental",
         date: "2024",
-        description: "Implementacion de CRM odoo en procesos de la empresa, creacion de modulos y codigo personalizado en Python y asistencia/soporte a usuarios.",
+        description: t('experience.miasfr.description'),
     },
     {
-        title: "Monitor de Calidad - Transporte LOS ALCES",
+        title: t('experience.alces.title'),
         date: "2020",
-        description: "Monitoreo, administración así como implementación de soluciones y procesos de sistema de verificación de flujos de pasajeros y localización de unidades con Python para analisis de calidad"
+        description: t('experience.alces.description'),
     },
 ]
 ---
 <SectionContainer id="experience">
     <Subtitle ClassList="mb-6">
-        Con ellos he trabajado
+        {t('experience.iveworked')}
     </Subtitle>
     <div>
         <ol class="relative border-s border-gray-200 dark:border-gray-700">
